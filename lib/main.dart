@@ -37,10 +37,15 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    final query = """ query GetContinents{
-  continents{
-  name
-}""";
+    // query to get continents
+    final String query = """
+      query Continents {
+        continents {
+          code
+          name
+        }
+      }
+    """;
     return Scaffold(
       appBar: AppBar(
         title: Text(
